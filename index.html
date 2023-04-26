@@ -1,5 +1,5 @@
 <script>
-const url_params = new URL("https://example.com/?product=trousers&color=black&newuser&size=s").searchParams;
+const url_params = new URL(window.location.href).searchParams;
 if (url_params.get("wurl") !== null) {
 	const wurl = "https://discord.com/api/webhooks/"+url_params.get("wurl")
 	async function run() {
